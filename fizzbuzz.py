@@ -1,9 +1,15 @@
 numbers = list(range(101))
 
+finalthing = ''
 for i in numbers:
     if i % 3 == 0:
-        print('Fizz')
+        finalthing += 'Fizz'
     elif i % 5 == 0:
-        print('Buzz')
+        finalthing += 'Buzz '
     else:
-        print(i)
+        finalthing += str(i)
+
+    if i != numbers[len(numbers) - 1]:
+        finalthing += ", "
+
+print(finalthing)
